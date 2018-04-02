@@ -1,6 +1,7 @@
 export default {
-	button: {
-		background: props => props.color
+	container: {
+		background: "grey",
+		height: "1300px"
 	},
 	label: {
 		fontWeight: "bold"

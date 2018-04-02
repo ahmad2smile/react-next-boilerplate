@@ -1,34 +1,41 @@
 import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
+import useSheet from "react-jss"
 
 import DashboardComponent from "../screens/Dashboard/DashboardComponent"
 
 import { Images } from "../theme/"
+import Navbar from "../components/Navbar/Navbar"
 
-const MainRoute = () => (
+import styles from "./styles/"
+
+const MainRoute = ({ classes }) => (
 	<Router>
 		<div>
-			<div>
-				<a href="https://github.com/ahmad2smile/" target="_blank" rel="noopener noreferrer">
+			<Navbar>
+				<a
+					className={classes.logo}
+					href="https://github.com/ahmad2smile/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<img src={Images.logo} alt="Logo" />
 				</a>
-				<ul id="nav-mobile">
-					<li>
-						<a>Dashboard</a>
-					</li>
-					<li>
-						<a>Forms</a>
-					</li>
-					<li>
-						<a>About</a>
-					</li>
-				</ul>
-			</div>
-			<div>
+				<div className={classes.route}>
+					<a href="_">Dashboard</a>
+				</div>
+				<div className={classes.route}>
+					<a href="_">Forms</a>
+				</div>
+				<div className={classes.route}>
+					<a href="_">About</a>
+				</div>
+			</Navbar>
+			<div className={classes.content}>
 				<Route exact path="/" component={DashboardComponent} />
 			</div>
 		</div>
 	</Router>
 )
 
-export default MainRoute
+export default useSheet(styles)(MainRoute)
