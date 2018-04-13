@@ -10,7 +10,8 @@ class DashboardComponent extends Component {
 
 		return (
 			<div className={classes.container}>
-				<div>DashboardComponent Here</div>
+				<h2>React Next Boilerplate</h2>
+				<div>React Boilerplate with latest and battle tested stack</div>
 			</div>
 		)
 	}
