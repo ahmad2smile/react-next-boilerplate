@@ -22,13 +22,13 @@ const MainRoute = ({ classes }) => (
 					<img src={Images.logo} alt="Logo" />
 				</a>
 				<div className={classes.route}>
-					<a href="_">Dashboard</a>
+					<a href="/">Dashboard</a>
 				</div>
 				<div className={classes.route}>
-					<a href="_">Forms</a>
+					<a href="/forms">Forms</a>
 				</div>
 				<div className={classes.route}>
-					<a href="_">About</a>
+					<a href="/about">About</a>
 				</div>
 			</Navbar>
 			<div className={classes.content}>
