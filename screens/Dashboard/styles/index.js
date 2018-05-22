@@ -8,10 +8,18 @@ export default {
 		display: "flex",
 		justifyContent: "space-between"
 	},
-	pageCard: {
+	pageCardFirst: {
 		display: "grid",
-		gridTemplateColumns: "repeat(3, 1fr)",
+		gridTemplateColumns: "repeat(4, 1fr)",
 		gridGap: "40px 50px",
+		marginTop: "10px",
+		gridAutoRows: "minmax(200px, auto)"
+	},
+	pageCardSecond: {
+		display: "grid",
+		gridTemplateColumns: "repeat(9, 1fr)",
+		gridGap: "40px 50px",
+		marginTop: "40px",
 		gridAutoRows: "minmax(200px, auto)"
 	}
 }

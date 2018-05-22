@@ -19,10 +19,18 @@ class DashboardComponent extends Component {
 					</div>
 					<div>Button</div>
 				</div>
-				<div className={classes.pageCard}>
-					{Array.from({ length: 5 }, (v, i) => (
-						<OverviewComponent gridColumn={i === 0 ? "2fr" : null} key={i} />
+				<div className={classes.pageCardFirst}>
+					{Array.from({ length: 2 }, (v, i) => (
+						<OverviewComponent
+							gridColumn={i === 0 ? "1 / 3" : i === 1 ? "3 / 5" : null}
+							key={i}
+						/>
 					))}
+				</div>
+				<div className={classes.pageCardSecond}>
+					<OverviewComponent gridColumn="1 / 4" />
+					<OverviewComponent gridColumn="4 / 7" />
+					<OverviewComponent gridColumn="7 / 10" />
 				</div>
 			</div>
 		)
